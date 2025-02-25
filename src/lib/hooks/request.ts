@@ -21,7 +21,7 @@ export const useRequest = () => {
       const json = await response.json();
       setData(json);
     } catch (error) {
-      setError(error);
+      setError(`Error: ${error}`);
     } finally {
       setLoading(false);
     }
