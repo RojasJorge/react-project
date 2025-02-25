@@ -1,0 +1,37 @@
+@use "./fonts";
+@use "./variables";
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+body {
+  @include fonts.font-roboto(300);
+  font-size: 1.3rem;
+  // letter-spacing: 2px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include fonts.font-dancing-script(700);
+  margin: 0;
+}
+
+h1 {
+  font-size: 4rem;
+  color: map-get(variables.$colors, primary);
+}
